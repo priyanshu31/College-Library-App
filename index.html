@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Library</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">College Library</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Adding Book -->
+  <div class="addContainer my-4 container">
+
+    <h2 class="my-1">College Library</h2>
+    <hr>
+    <h4 class="my-1">Add Books</h4>
+    <hr>
+    <form id="libForm">
+      <div class="row mb-3 form-group">
+        <label for="bookName" class="col-sm-2 col-form-label" style="font-weight: bold;">Book Name</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="bookName" placeholder="Enter your Book Name">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="authorName" class="col-sm-2 col-form-label" style="font-weight: bold;">Author Name</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="authorName" placeholder="Enter your Author Name">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="authorName" class="col-sm-2 col-form-label" style="font-weight: bold;">Book Quantity</label>
+        <div class="col-sm-10">
+          <input type="number" class="form-control" id="bookNumber">
+        </div>
+      </div>
+      <fieldset class="row mb-3">
+        <legend class="col-form-label col-sm-2 pt-0" style="font-weight: bold;" id="contentType">Content Type</legend>
+        <div class="col-sm-10">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="Fiction" value="Fiction" id="Fiction">
+            <label class="form-check-label" for="gridRadios1">
+              Fiction
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="Academic" value="Academic" id="Academic">
+            <label class="form-check-label" for="gridRadios2">
+              Academic
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="Novel" value="Novel" id="Novel">
+            <label class="form-check-label" for="gridRadios3">
+              Novel
+            </label>
+          </div>
+        </div>
+      </fieldset>
+
+      <button type="submit" class="btn btn-primary" id="addBook">Add Book</button>
+    </form>
+
+    <div class="alert" id="alert">
+
+    </div>
+
+    <!-- Table for Books -->
+    <hr>
+    <h4>Books Available in Library</h4>
+    <hr>
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Book Name</th>
+          <th scope="col">Author Name</th>
+          <th scope="col">Type</th>
+          <th scope="col">Qunatity</th>
+          <th scope="col">Remove</th>
+        </tr>
+      </thead>
+      <tbody id="table-row">
+        
+      </tbody>
+    </table>
+
+  </div>
+
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+<script src="index.js"></script>
+
+</html>
